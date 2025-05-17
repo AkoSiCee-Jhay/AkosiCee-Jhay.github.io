@@ -1,0 +1,210 @@
+/* General Styles */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 56px;
+    color: #e0ffe0;
+    background: #101010;
+}
+
+/* Make all paragraph text visible and override unwanted inherited color */
+p, .lead, .card-text, .text-muted {
+    color: #e0ffe0 !important;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #101010 60%, #21c95b22 100%);
+    color: white;
+    padding-top: 80px;
+}
+
+.profile-img {
+    border: 5px solid #21c95b;
+    box-shadow: 0 0 30px #21c95b44;
+    max-width: 350px;
+}
+
+.social-icons a {
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+/* About Section */
+.about-img {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Section */
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    background: #222;
+}
+
+/* Portfolio Section */
+.portfolio-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #21c95b33;
+    background: #181818;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: #21c95b;
+}
+
+/* Contact Section */
+.contact-info .icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form .form-control {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #21c95b;
+    color: #101010;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.2s;
+    z-index: 999;
+}
+
+.back-to-top.active {
+    display: flex;
+}
+
+.back-to-top:hover {
+    background: #1a9c46;
+    color: #fff;
+}
+
+/* Navbar and Footer */
+.bg-dark, .navbar-dark.bg-dark, footer.bg-dark {
+    background: #111c13 !important;
+}
+
+.navbar-brand, .nav-link, .section-title h2, .display-4, .display-5, .lead, .card-title {
+    color: #21c95b !important;
+}
+
+.nav-link.active, .nav-link:focus, .nav-link:hover {
+    color: #fff !important;
+    background: #21c95b !important;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.btn-primary, .progress-bar.bg-primary {
+    background-color: #21c95b !important;
+    border-color: #21c95b !important;
+}
+
+.btn-outline-light {
+    color: #21c95b !important;
+    border-color: #21c95b !important;
+}
+
+.btn-outline-light:hover, .btn-primary:hover {
+    background: #1a9c46 !important;
+    color: #fff !important;
+    border-color: #1a9c46 !important;
+}
+
+/* Typewriter effect */
+.typewriter > .typewriter-text {
+    border-right: 2px solid #21c95b;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    min-width: 1ch; /* Ensures the caret is always visible */
+    min-height: 1em; /* Prevents collapsing if empty */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    0%, 100% { border-color: #21c95b; }
+    50% { border-color: transparent; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-section {
+        text-align: center;
+        padding-top: 100px;
+    }
+    
+    .profile-img {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 72px;
+    }
+    
+    .hero-section {
+        padding-top: 80px;
+    }
+    
+    h1.display-4 {
+        font-size: 2.5rem;
+    }
+}
